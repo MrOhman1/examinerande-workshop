@@ -677,6 +677,7 @@ GameObject:
   - component: {fileID: 891333035}
   - component: {fileID: 891333034}
   - component: {fileID: 891333033}
+  - component: {fileID: 891333037}
   - component: {fileID: 891333036}
   m_Layer: 5
   m_Name: Button
@@ -749,8 +750,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 891333036}
-        m_TargetAssemblyTypeName: Swaptoplayscene, Assembly-CSharp
+      - m_Target: {fileID: 891333037}
+        m_TargetAssemblyTypeName: swaptobackstory, Assembly-CSharp
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -809,6 +810,21 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 400fb92b847ef3244b8bc256ad0dd316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onstart:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &891333037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891333031}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aacff97068ef02941aa529e25239e8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onstart:
