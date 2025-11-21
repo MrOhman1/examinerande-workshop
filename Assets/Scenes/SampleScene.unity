@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 198341737}
   - component: {fileID: 198341736}
   - component: {fileID: 198341735}
+  - component: {fileID: 198341742}
+  - component: {fileID: 198341743}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -218,7 +220,7 @@ MonoBehaviour:
   maxSpeed: 10
   jumpForce: 10
   spriteRenderer: {fileID: 198341740}
-  animator: {fileID: 0}
+  animator: {fileID: 198341742}
 --- !u!70 &198341737
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -389,6 +391,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &198341742
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198341734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f41137465e588164abd4871dcbd77342, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!81 &198341743
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198341734}
+  m_Enabled: 1
 --- !u!1 &364449850
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +509,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +732,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: ea3ee9bf18768c548b2116151ab26bfa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -708,8 +740,8 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
+  Priority: 0
+  DopplerLevel: 0.09
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -746,7 +778,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -761,7 +793,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.06388889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -794,12 +826,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679787218}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23095465, y: 0.20935477, z: 0.049627922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.32, y: -0.27, z: 0.10194726}
+  m_LocalScale: {x: 2.054232, y: 2.054232, z: 2.054232}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1011318946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &840571357
 PrefabInstance:
@@ -871,9 +903,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 50e22ae232dda054d9f0fa1699203624, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1884083134946496866, guid: 5f56a51073c491e46b5759e5c86f6d5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 679787220}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f56a51073c491e46b5759e5c86f6d5d, type: 3}
+--- !u!4 &1011318946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1884083134946496866, guid: 5f56a51073c491e46b5759e5c86f6d5d, type: 3}
+  m_PrefabInstance: {fileID: 840571357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1125635594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,7 +1144,7 @@ MonoBehaviour:
   oneShot: 0
   startDelay: 0
   playWithFade: 1
-  targetVolume: 1
+  targetVolume: 0.771
   fadeSpeed: 1
   clipsToPlay:
   - {fileID: 8300000, guid: e1c53289a3f6aa04da85fc3b66c7bb09, type: 3}
@@ -1300,4 +1340,3 @@ SceneRoots:
   - {fileID: 1319425403}
   - {fileID: 1125635595}
   - {fileID: 1957158359}
-  - {fileID: 679787220}
