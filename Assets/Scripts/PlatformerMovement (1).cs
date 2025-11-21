@@ -48,6 +48,7 @@ public class PlatformerMovement : MonoBehaviour
     
     void Update()
     {
+        FixedUpdate();
         velocity = TranslateInputToVelocity(moveInput);
         
         // Apply jump-input:
@@ -92,6 +93,8 @@ public class PlatformerMovement : MonoBehaviour
         isGrounded = IsGrounded();
         ApplyGravity();
         rb.linearVelocity = velocity;
+        animator.SetFloat("x-velocity",velocity.x);
+        animator.SetFloat("y-velocity",velocity.y);
         
         // Write movement animation code here. (Suggestion: send your current velocity into the Animator for both the x- and y-axis.)
     }
